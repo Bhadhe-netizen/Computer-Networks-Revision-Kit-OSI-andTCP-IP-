@@ -1,0 +1,19 @@
+Hand-worked answers vs Python ipaddress module
+==================================================
+Problem  1: 192.168.1.77/26      OK  -> 192.168.1.64 .. 192.168.1.127  (62 hosts)
+Problem  2: 172.16.45.200/20     OK  -> 172.16.32.0 .. 172.16.47.255  (4094 hosts)
+Problem  3: 10.5.130.9/17        OK  -> 10.5.128.0 .. 10.5.255.255  (32766 hosts)
+Problem  4: 192.168.100.200/27   OK  -> 192.168.100.192 .. 192.168.100.223  (30 hosts)
+Problem  5: 203.0.113.99/28      OK  -> 203.0.113.96 .. 203.0.113.111  (14 hosts)
+Problem  6: 172.31.200.17/22     OK  -> 172.31.200.0 .. 172.31.203.255  (1022 hosts)
+Problem  7: 192.168.5.130/30     OK  -> 192.168.5.128 .. 192.168.5.131  (2 hosts)
+Problem  8: 10.99.77.5/19        OK  -> 10.99.64.0 .. 10.99.95.255  (8190 hosts)
+Problem  9: 255.255.255.248 = /29, 6 hosts            OK
+Problem 10: 500 hosts -> /23 (510); 60 hosts -> /26 (62) OK
+Problem 11: 192.168.10.0/24 -> 4 x /26                OK
+Problem 12: VLSM 100/50/25/10 -> /25 /26 /27 /28        OK
+Problem 13: same-subnet checks (yes / no)               OK
+Problem 14: 172.16.4-7.0/24 -> 172.16.4.0/22              OK
+Problem 15: 172.32.5.1 is public (outside 172.16/12)       OK
+
+RESULT: 15/15 hand answers match the computed values.
